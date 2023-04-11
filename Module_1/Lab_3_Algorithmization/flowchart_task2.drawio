@@ -1,9 +1,132 @@
-<mxfile host="app.diagrams.net" modified="2023-04-11T10:50:48.845Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/111.0" version="21.1.5" etag="PyLQfmOhJtZaEVg0wBA8" type="github">
+<mxfile host="app.diagrams.net" modified="2023-04-11T11:04:46.710Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10.15; rv:109.0) Gecko/20100101 Firefox/111.0" etag="2IElgMiTfbPbOu_e00PN" version="21.1.5" type="github">
   <diagram name="Page-1" id="BuHnekea4fwXxePmSo1F">
-    <mxGraphModel>
+    <mxGraphModel dx="954" dy="511" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-4" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="daYtWWZPQrdBamJuFE2Y-2" target="daYtWWZPQrdBamJuFE2Y-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-7" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="daYtWWZPQrdBamJuFE2Y-2" target="daYtWWZPQrdBamJuFE2Y-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-2" value="Financier is approved by counterparties" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="10" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="daYtWWZPQrdBamJuFE2Y-3" target="daYtWWZPQrdBamJuFE2Y-9">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="295" y="130" />
+              <mxPoint x="295" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-3" value="A collaboration space is created" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="210" y="10" width="170" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-5" value="&lt;div&gt;Yes&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="155" y="20" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-6" value="No trade bye." style="whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="10" y="470" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-8" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="40" y="210" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-12" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="daYtWWZPQrdBamJuFE2Y-9" target="daYtWWZPQrdBamJuFE2Y-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-9" value="&lt;div&gt;Financier bids (proposes conditions for financial agreement to buyer)&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="239" y="120" width="175" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-14" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="daYtWWZPQrdBamJuFE2Y-11" target="daYtWWZPQrdBamJuFE2Y-13">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="430" y="243" />
+              <mxPoint x="430" y="243" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-11" value="&lt;div&gt;Buyer analyses &lt;br&gt;&lt;/div&gt;&lt;div&gt;the bid&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="250" y="210" width="140" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-23" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="daYtWWZPQrdBamJuFE2Y-13" target="daYtWWZPQrdBamJuFE2Y-22">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="243" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="750" y="235" />
+              <mxPoint x="750" y="240" />
+              <mxPoint x="755" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-41" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.628;entryY=0.017;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="daYtWWZPQrdBamJuFE2Y-13" target="daYtWWZPQrdBamJuFE2Y-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-13" value="Buyer agrees to the conditions" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="491.75" y="180" width="138.25" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="daYtWWZPQrdBamJuFE2Y-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="370" y="360" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-15" value="Buyer makes a counterproposal to the financier" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="460" y="330" width="160.88" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-17" value="&lt;div&gt;Yes&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="640" y="210" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-45" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="daYtWWZPQrdBamJuFE2Y-22" target="daYtWWZPQrdBamJuFE2Y-46">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="550" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-22" value="&lt;div&gt;Buyer pays.&lt;/div&gt;&lt;div&gt;Transaction &lt;br&gt;&lt;/div&gt;&lt;div&gt;amount is locked&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="690" y="410" width="130" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-33" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="daYtWWZPQrdBamJuFE2Y-27">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="390" y="430" as="sourcePoint" />
+            <mxPoint x="755" y="410" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="720" y="420" />
+              <mxPoint x="720" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-42" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" source="daYtWWZPQrdBamJuFE2Y-27" target="daYtWWZPQrdBamJuFE2Y-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-27" value="&lt;div&gt;Financier agrees&lt;/div&gt;&lt;div&gt;&amp;nbsp;to the &lt;br&gt;&lt;/div&gt;&lt;div&gt;counterproposal&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="239" y="300" width="138.25" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-43" value="No" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="155" y="410" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-44" value="&lt;div&gt;Yes&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="500" y="400" width="40" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="daYtWWZPQrdBamJuFE2Y-46" target="daYtWWZPQrdBamJuFE2Y-47">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="540" y="555" />
+              <mxPoint x="540" y="555" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-46" value="&lt;div&gt;Trade happens &lt;br&gt;&lt;/div&gt;&lt;div&gt;and is confirmed&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+          <mxGeometry x="600" y="525" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="daYtWWZPQrdBamJuFE2Y-47" target="daYtWWZPQrdBamJuFE2Y-49">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-47" value="&lt;div&gt;Transaction &lt;br&gt;&lt;/div&gt;&lt;div&gt;amount &lt;br&gt;&lt;/div&gt;&lt;div&gt;is unlocked&lt;/div&gt;&lt;div&gt;Financier &lt;br&gt;&lt;/div&gt;&lt;div&gt;is payed&lt;br&gt;&lt;/div&gt;" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="390" y="470" width="140" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="daYtWWZPQrdBamJuFE2Y-49" value="End." style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="400" y="630" width="120" height="60" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
