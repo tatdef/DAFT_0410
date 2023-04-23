@@ -91,7 +91,7 @@ Using the output from Step 2, write a query, containing two subqueries, to obtai
 
 Sort the output based on a total profits from high to low, and limit the number of rows to 3. */
 
-SELECT auth.au_id as author_id, subsub.sum_royalties + summary.advance as total_profit
+SELECT auth.au_id as author_id, sum(subsub.sum_royalties) + sum(summary.advance) as total_profit
 FROM publications.authors auth
 LEFT JOIN(
 SELECT titles.title_id, auth.au_id, titles.advance*titleauthor.royaltyper/100 as advance, 
@@ -124,13 +124,73 @@ In the previous challenge, you have developed your solution the following way:
 
 We'd like you to try the other way:
     Creating MySQL temporary tables and query the temporary tables in the subsequent steps.*/
+
+CREATE TEMPORARY TABLE publications.advancetable
+SELECT titles.title_id, auth.au_id, titles.advance*titleauthor.royaltyper/100 as advance, 
+titles.price * sales.qty * titles.royalty/100 * titleauthor.royaltyper/100 as sales_royalty
+FROM publications.titles titles
+LEFT JOIN publications.sales sales USING(title_id)
+LEFT JOIN publications.titleauthor titleauthor USING(title_id)
+LEFT JOIN publications.authors auth USING (au_id)
+ORDER BY titles.title_id;
+
+CREATE TEMPORARY TABLE publications.royalties
+SELECT titles.title_id, auth.au_id, sum(summary.sales_royalty) as sum_royalties
+FROM publications.titles titles
+LEFT JOIN (
+SELECT titles.title_id, auth.au_id, titles.advance*titleauthor.royaltyper/100 as advance, 
+titles.price * sales.qty * titles.royalty/100 * titleauthor.royaltyper/100 as sales_royalty
+FROM publications.titles titles
+LEFT JOIN publications.sales sales USING(title_id)
+LEFT JOIN publications.titleauthor titleauthor USING(title_id)
+LEFT JOIN publications.authors auth USING (au_id) 
+ORDER BY titles.title_id) summary USING (title_id)
+LEFT JOIN publications.authors auth USING (au_id)
+GROUP BY auth.au_id, titles.title_id;
+
+SELECT auth.au_id as author_id, sum(roy.sum_royalties) + sum(adv.advance) as total_profit
+FROM publications.authors auth
+LEFT JOIN publications.advancetable adv USING (au_id)
+LEFT JOIN publications.royalties roy USING (au_id)
+GROUP BY auth.au_id
+ORDER BY total_profit desc LIMIT 3;
     
 /*Challenge 3
 
-Elevating from your solution in Challenge 1 & 2, create a permanent table named most_profiting_authors to hold the data about the most profiting authors. The table should have 2 columns:
-
+Elevating from your solution in Challenge 1 & 2, create a permanent table 
+named most_profiting_authors to hold the data about the most profiting authors. 
+The table should have 2 columns:
     au_id - Author ID
     profits - The profits of the author aggregating the advances and royalties*/
+
+use publications;
+create table if not exists publications.highest_profiting_authors as (
+SELECT auth.au_id as author_id, sum(subsub.sum_royalties) + sum(summary.advance) as total_profit
+FROM publications.authors auth
+LEFT JOIN(
+SELECT titles.title_id, auth.au_id, titles.advance*titleauthor.royaltyper/100 as advance, 
+titles.price * sales.qty * titles.royalty/100 * titleauthor.royaltyper/100 as sales_royalty
+FROM publications.titles titles
+LEFT JOIN publications.sales sales USING(title_id)
+LEFT JOIN publications.titleauthor titleauthor USING(title_id)
+LEFT JOIN publications.authors auth USING (au_id) 
+ORDER BY titles.title_id) summary USING (au_id)
+LEFT JOIN(
+SELECT titles.title_id, auth.au_id, sum(summary.sales_royalty) as sum_royalties
+FROM publications.titles titles
+LEFT JOIN (
+SELECT titles.title_id, auth.au_id, titles.advance*titleauthor.royaltyper/100 as advance, 
+titles.price * sales.qty * titles.royalty/100 * titleauthor.royaltyper/100 as sales_royalty
+FROM publications.titles titles
+LEFT JOIN publications.sales sales USING(title_id)
+LEFT JOIN publications.titleauthor titleauthor USING(title_id)
+LEFT JOIN publications.authors auth USING (au_id) 
+ORDER BY titles.title_id) summary USING (title_id)
+LEFT JOIN publications.authors auth USING (au_id)
+GROUP BY auth.au_id, titles.title_id) subsub USING (au_id)
+GROUP BY auth.au_id
+ORDER BY total_profit desc LIMIT 3);
+-- should probably use CTE but too tired to do it right now :) 
 
 /* To balance the performance of database transactions and the timeliness of the data, software/data engineers often 
 schedule automatic scripts to query the data periodically  and save the results in persistent summary tables. 
