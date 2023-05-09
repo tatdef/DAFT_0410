@@ -21,6 +21,7 @@ To complete this lab, follow each of the steps below.
     - Use the Date() function, and as input concatonate a date string in this format "YYYY-MM-DD" using the str() function with the provided year and month fields and a constant for the day
 6. Move to your first sheet
 7. Drag your newly created Year_Month calculated field to rows and click the [+] on the pill in rows so you see both the year and quarter.
+
 8. Create a new worksheet for each of the following tabular views:
     - Total Retail Sales by Year/Quarter (rows).
     - Average Retail Sales by Year/Quarter (rows).
@@ -39,7 +40,7 @@ To complete this lab, follow each of the steps below.
 
 ## Deliverables
 
-- `main.txt` file with a link to your Tableau Public workbook.
+https://public.tableau.com/views/Lab23_16836444051550/Dashboard1?:language=fr-FR&publish=yes&:display_count=n&:origin=viz_share_link 
 
 ## Submission
 
