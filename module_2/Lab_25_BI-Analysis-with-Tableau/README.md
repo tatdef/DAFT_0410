@@ -2,6 +2,10 @@
 
 # Lab | BI Analysis with Tableau
 
+## Deliverable
+
+- https://public.tableau.com/app/profile/tatiana.de.feraudy/viz/Lab25_BI_Tableau/Story1?publish=yes
+
 ## Introduction
 
 In this lab, we will practice performing business intelligence analysis on a company's customer data. We will use a public dataset from Kaggle which can be obtained [here](https://www.kaggle.com/blastchar/telco-customer-churn). The dataset is likely to be the customer records of a telecom company where customers' personal identifiable information has been removed. It contains customer information such as their demographic information, what telecom services the customer uses, billing information, etc. In specific, the last column of the dataset is `Churn`, which is a business jargon indicating customers who have cancelled their service. In the Kaggle project, data scientists use this dataset to practice predicting customer behavior in order to retain them. In our lab today, we will use the dataset to practice Business Intelligence Analysis with Tableau.
@@ -34,7 +38,7 @@ To complete this lab, follow each of the steps below.
     - Add row and column grand totals to this visualization as well.
     - There are a few insights that we should be able to derive from this visualization.
         - Most of the company's customers have both phone and internet service with the company.
-        - Fiber optic is the most popular type of internet service, especially among customers that have phone service with multiple lines.
+        - Fiber optic is the most popular type of interneLab25t service, especially among customers that have phone service with multiple lines.
         - DSL is the only type of internet service provided to customers that do not have phone service.
 4. We can also look at what billing options are most popular among customers. This time we ask you to figure out how to create a stacked bar chart that:
     - Shows an intuitive view on which Payment Method (i.e. Bank Transfer, Credit Card, Electronic Check, and Mailed Check) is most popular with the Paperless Billing option (`Yes` and `No`).
@@ -44,11 +48,23 @@ To complete this lab, follow each of the steps below.
         ![Payment Method vs Paperless Billing](payment-vs-paperless-billing.png).
 
     - From this visualization, we can see that most customers who have paperless billing also pay via electronic payment methods (with electronic check being the most popular), while payment via mailed check is the most popular payment option for customers who do not have paperless billing.
+
+### Actually a much clearer way to show it is to use percentages that flatten the difference in numbers between the paperless billing or not.  
+
     - Bonus: You can also blend in the Contract dimension to get a more granular view of which billing options are most popular among customers on Month-to-Month, One Year, and Two Year service contracts. How? Your visualization should look like this:
 
         ![Payment Method vs Paperless Billing by Contract Type](payment-vs-paperless-billing-by-contract-type.png).
 
     - What are your observations?
+
+***That customers with paperless billing pay mostly by electronic check, while customers without paperless billing pay more often by mailed check. However, the average share of customers paying automatically is about the same whether or not they subscribed to paperless billing (45 vs. 42% respectively).*** 
+***The payment method vs. paperless billing by contract type graph is horrible to read and skewed because of the weight of the electronic checks. If we transform it to show percentages and use the contract as rows, it's easier to read.*** 
+***Then we notice : *** 
+***a. that customers on month-to-month contracts prefer paperless billing and are the ones that use electronic checks the most (which makes sense considering what we saw previously).***
+***b. They are also the ones that have less often an automatic payment method (<30%, vs. over 50 for one-year contracts, and over 65 % for 2 year contract holders)***
+***b. that payment methods are relatively similarly distributed among one year contract holders. ***
+***c. long term contract holders (two years) tend to move towards automatic payment methods (bank transfer or credit card), but 1 out of 5 still mails checks and almost 1 out of 10 pays through electronic check.***  
+
 
 5. Now that we have looked at customer distribution from a variety of perspectives, let's shift our focus to some of the other measures in our data set. Specifically, let's take a look at how pricing (Monthly Charge) changes with longevity (Tenure). 
     - Create a visualization that:
@@ -59,6 +75,7 @@ To complete this lab, follow each of the steps below.
         ![Avg. Monthly Charge vs Tenure](monthly-charge-vs-tenure.png).
 
     - We can see that the average monthly charge across all customers starts out at $41.42, increases sharply in the first three months to $57.21, and then continues to increase gradually to eventually reach the $80 price range.
+
 6. We can observe the relationship between Monthly Charges and Tenure from a variety of perspectives to gain insight into how pricing changes for different subsets of customers.
     1. The first perspective we want to gain insight is the gender difference.
         1. Create a duplicate of the previous Monthly Charge by Tenure visualization.
@@ -68,9 +85,16 @@ To complete this lab, follow each of the steps below.
 
     1. One of the interesting insights we can see from this perspective is that the company charges new women customers twice as much on average than new male customers. However, we see that by the third month, the price level for men is back up to where it is for women. 
     1. How to interpret the insight above? Well, one possibility is that the company regularly runs low-cost 3-month introductory promotions targeted at men to try their services. Do you have other interpretation?
+
+    ***we would have to check age and types of services subscribed to be able to answer*** 
+
     1. Create another duplicate of the original Monthly Charge by Tenure visualization. Add the Senior Citizen dimension.
+
     1. Add the Senior Citizen dimension to the chart. What do you notice? Does the company charge more, less, or the same for senior citizens compared to non-senior citizens?
+    *** it charges more** 
+
 7. The pricing charts we have looked at thus far makes it seem like the company is providing cheaper services to some customers based on demographics. However, we should also take into consideration that pricing is typically heavily dependent on services purchased (e.g. Multiple Lines and Internet Service. It may just be that seniors purchase more expensive services (i.e. multiple lines and type of Internet service) on average than younger customers. To test our theory, let's look at how pricing varies across services.
+
     - Create another duplicate of the original Monthly Charge by Tenure visualization. Add the relevant dimensions to visualize how average monthly charge varies for seniors vs non-seniors when the customer signed up for multiple lines. Your end product should look like this:
 
         ![Senior Montly Charge by Multiple Lines](senior-monthly-charge-by-multiple-line.png)
@@ -80,10 +104,12 @@ To complete this lab, follow each of the steps below.
         ![Senior Montly Charge by Internet Service](senior-monthly-charge-by-internet-service.png)
 
     - The charts above suggest the company charges seniors significantly more than non-seniors for those who sign up for single-line phone service. The company charges seniors slightly more than non-seniors for those who sign up for multiple-line phone service. There is no obvious charge difference between senior and non-senior when they sign up differen types of Internet Service.
+
 8. Instead of using line charts to visualize pricing for different demongraphics vs services separately, we can also visualize both demographics *and* services at the same time using *highlight table*.
     - Create a highlight table to visualize Average Monthly Charges by Internet Service and Multiple Lines (rows) and Gender and Senior Citizen (columns).
     - Display row and column grand totals.
     - From this perspective, we can see that the prices for the different combination of core services do not differ significantly across demographic features.
+
 9. Let's use the highlight table to visualize with percentages instead of totals.
     1. Create a new highlight table to visualize Internet Service (row) agains Senior Citizen (column) on the Number of Records.
     1. Display the Grant Total for both rows and columns.
@@ -93,27 +119,26 @@ To complete this lab, follow each of the steps below.
         ![Senior vs Internet Service](senior-vs-internet-service.png)
 
     - From this visualization, we can see that the proportion of customers that have fiber optic internet (the highest price service) is higher among seniors than it is among non-seniors. This is likely the cause for the price difference among those two groups. Seniors indeed tend to sign up for more expensive services.
+
 10. The final perspective we will analyze this data set from is the number of customers that churn by demographic and service combination.
     - Create another duplicate of the highlight table visualization showing pricing by demographics and services.
     - Create a calculated field called Churned by going to *Analysis > Create Calculated Field* and entering the following formula: `IF [Churn]='Yes' THEN 1 ELSE 0 END`.
     - Drag and drop the newly-created Churned measure to replace Monthly Charges wherever it appears in the Marks section.
+
     - By default, Tableau will sum the measure which will show us the number of customers that churned in each segment. This is useful, but what we really want to see is the percentage of customers that churned. To see this, click on the drop-down next to the dimension wherever it appears in the Marks section, select *Measure*, and change the value to *Average*.
+
     - We can see that the churn rates are higher for fiber optic internet across the board than for any other service. We know that fiber is also the highest priced, so perhaps customers aren't happy paying such high prices.
+
 11. Next, we are going to combine all the visualizations we used to explore the data into a Tableau Story.
     - Create a new Story by clicking on *Story > New Story*).
     - Our story should document our journey throughout this lab, so you should create a Story Point for each visualization we have created. You can create a new Story Point by clicking on the *Blank* button under the *New Story Point* heading in the left pane of the workbook.
     - Drag and drop each visualization into a new Story Point.
     - Add a caption for each Story Point that briefly describes the chart. For example, the first one can be captioned *Customer Demographics*, the second one can be captioned *Customers by Service*, etc.
     - Add an annotation to each Story Point describing the insights derived from the visualization. If you're having trouble with what to write, you can copy and paste the insights we have been documenting throughout each of the tasks above.
+
 12. Save your work to Tableau Public, ensure that your workbook is viewable, and copy the URL for the workbook into the deliverables file for this lab.
 
-## Deliverables
 
-- `main.txt` file with a link to your Tableau Public workbook.
-
-## Submission
-
-Upon completion, add your deliverables to git. Then commit git and push your branch to the remote.
 
 ## Resources
 
