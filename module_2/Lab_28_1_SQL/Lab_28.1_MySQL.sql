@@ -66,27 +66,7 @@ Hint: select the payment_id, customer_id, amount, and payment_date columns from 
 and then applying the LAG and LEAD functions to the amount column, partitioning by customer_id and ordering by payment_date.*/
 
 SELECT payment_id, customer_id, amount, payment_date 
-, lag(amount) over (partition by customer_id order by payment_date) as previous_amount
-, lead(amount) over (partition by customer_id order by payment_date) as next_amount
+, (lag(amount) over (partition by customer_id order by payment_date))-amount as diff_previous_amount
+, amount - (lead(amount) over (partition by customer_id order by payment_date)) as diff_next_amount
 FROM payment
 ORDER BY payment_id; 
-
--- FINALIZE THIS QUERY WITH THE DIFFERENCE CALCULATION 
-Expected output:
-payment_id customer_id amount payment_date diff_from_prev diff_from_next
-
-1 1 2.99 2005-05-25 11:30:37 NULL 2.00
-
-2 1 0.99 2005-05-28 10:35:23 -2.00 -5.00
-
-3 1 5.99 2005-06-15 00:54:12 5.00 5.00
-
-4 1 0.99 2005-06-15 18:02:53 -5.00 -9.00
-
-5 1 9.99 2005-06-15 21:08:46 9.00 5.00
-
-6 1 4.99 2005-06-16 15:18:57 -5.00 0.00
-
-7 1 4.99 2005-06-18 08:41:48 0.00 4.00
-
-..................
