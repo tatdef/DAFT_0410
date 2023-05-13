@@ -6,7 +6,6 @@
 
 In this lab, we will practice more in Business Intelligence in Tableau
 
-
 ## Part 1
 
 1. Download the dataset.
@@ -74,30 +73,30 @@ d. Iowa
 average profit across all categories?
 a. Appliances
 b. Bookcases
-c. Envelopes
-**d. Paper**
+**c. Envelopes**
+d. Paper
 
 10. What percent of total profits do the top 10 customer by Sales represent?
 a. 3.50%
-b. 5.03%
+**b. 5.03%**
 c. 17.54%
 d. None of the Above
 
 11. What was the Moving Average of Sales in June of 2012, including six months prior and six months after?
 a. $101,752
 b. $180,036
-c. $188,552
+**c. $188,552**
 d. $286,170
 
 12. Create a histogram showing the number of Sales using Sales Bins of $1,000. Which bins have profit ratios
 (profit as a percentage of sales) of more than 25%? (Select all that apply)
 a. 1,000
 b. 3,000
-c. 7,000
-d. 8,000
+**c. 7,000
+d. 8,000**
 e. 10,000
-f. 11,000
-g. 18,000
+**f. 11,000
+g. 18,000**
 
 
 ## Part 2
