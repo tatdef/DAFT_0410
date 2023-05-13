@@ -102,3 +102,4 @@ g. 18,000**
 ## Part 2
 1. Add animated bubbles chart (tips: check extentions)
 2. Add dashboard filters by Order Priority, Customer Segment and Product Category
+DONE 
